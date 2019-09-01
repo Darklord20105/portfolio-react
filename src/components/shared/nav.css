@@ -1,0 +1,20 @@
+#mainNav .navbar-brand {
+	font-family: 'Pacifico', sans-serif !important;
+}
+
+.navbar > .container,
+.navbar > .container-fluid {
+	border-radius: 100px;
+	background: rgba(0, 0, 0, 0.3);
+	padding: 8px 35px;
+}
+
+#mainNav .navbar-nav .nav-item .nav-link:link {
+	border-bottom: 2px solid transparent;
+}
+#mainNav .navbar-nav .nav-item .nav-link.active,
+#mainNav .navbar-nav .nav-item .nav-link:hover {
+	border-bottom: 2px solid #fed136;
+	color: #f4f4f4 !important;
+	transition: all 1s;
+}
