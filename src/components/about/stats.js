@@ -1,35 +1,25 @@
 import React from 'react';
 import './stats.css';
-const Stats = () => {
+const Stats = ({ statsData }) => {
 	return (
-		<section className="bg-dark" id="about-b">
-			<div className="container" style={{ maxWidth: 1100 + 'px' }}>
-				<h3 className="text-center section-heading">Technical skills</h3>
+		<section className="bg-dark page-section" id="stats">
+			<div>
+				<div className="container">
+					<h2 className="text-center text-uppercase section-heading Gugi " style={{ color: '#f4f4f4' }}>
+						Technical skills
+					</h2>
 
-				<div className="stats" style={{ paddingTop: 2 + 'rem' }}>
-					<h4 className="Gugi ">Photography</h4>
-					<div className="progress">
-						<div className="stats-count" style={{ width: 100 + '%' }} />
-					</div>
-					<h4 className="Gugi ">Adobe illustrator</h4>
-					<div className="progress">
-						<div className="stats-count" style={{ width: 70 + '%' }} />
-					</div>
-					<h4 className="Gugi ">Adobe Photoshop</h4>
-					<div className="progress">
-						<div className="stats-count" style={{ width: 60 + '%' }} />
-					</div>
-					<h4 className="Gugi ">HTML CSS</h4>
-					<div className="progress">
-						<div className="stats-count" style={{ width: 100 + '%' }} />
-					</div>
-					<h4 className="Gugi ">Wordpress</h4>
-					<div className="progress">
-						<div className="stats-count" style={{ width: 70 + '%' }} />
-					</div>
-					<h4 className="Gugi ">React</h4>
-					<div className="progress">
-						<div className="stats-count" style={{ width: 70 + '%' }} />
+					<div className="stats" style={{ paddingTop: 2 + 'rem' }}>
+						{statsData.map(({ name, progStyle }, index) => {
+							return (
+								<div>
+									<h4 className="Gugi ">{name}</h4>
+									<div className="progress">
+										<div className="stats-count" style={progStyle} />
+									</div>
+								</div>
+							);
+						})}
 					</div>
 				</div>
 			</div>

@@ -7,7 +7,7 @@ const Services = () => {
 				<div className="row">
 					<div className="col-lg-12 text-center">
 						<h2 className="section-heading text-uppercase Gugi">Services</h2>
-						<h3 className="section-subheading text-muted Gugi">
+						<h3 className="section-subheading  text-muted">
 							creating digital masterpieces and UI/UX layouts using the Latest most powerfull techniques
 							for websites, Web apps and mobile applications
 						</h3>

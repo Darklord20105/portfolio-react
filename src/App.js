@@ -9,6 +9,7 @@ import Portfolio from './components/Portfolio';
 // about components
 import Bio from './components/about/bio';
 import Stats from './components/about/stats';
+import statsData from './components/about/statsData';
 // contact form
 import Contact from './components/contact/contact';
 // footer
@@ -54,7 +55,7 @@ function App() {
 			<Services />
 			<Portfolio portfolioLinks={portfolioLinks} />
 			<Bio />
-			<Stats />
+			<Stats statsData={statsData} />
 			<Contact />
 			<Footer />
 		</div>
