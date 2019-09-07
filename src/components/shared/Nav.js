@@ -12,15 +12,15 @@ const Nav = () => {
 					className="navbar-toggler navbar-toggler-right"
 					type="button"
 					data-toggle="collapse"
-					data-target="#navbarResponsive"
-					aria-controls="navbarResponsive"
+					data-target="#navbarSupportedContent"
+					aria-controls="navbarSupportedContent"
 					aria-expanded="false"
 					aria-label="Toggle navigation"
 				>
 					Menu_
 					<i className="fa fa-bars" />
 				</button>
-				<div className="collapse navbar-collapse" id="navbarResponsive">
+				<div className="collapse navbar-collapse" id="navbarSupportedContent">
 					<ul className="navbar-nav text-uppercase ml-auto">
 						<li className="nav-item">
 							<a className="nav-link Gugi js-scroll-trigger " href="#services">
@@ -33,13 +33,13 @@ const Nav = () => {
 							</a>
 						</li>
 						<li className="nav-item">
-							<a className="nav-link Gugi js-scroll-trigger " href="#about">
+							<a className="nav-link Gugi js-scroll-trigger " href="#bio">
 								About
 							</a>
 						</li>
 						<li className="nav-item">
-							<a className="nav-link Gugi js-scroll-trigger " href="#team">
-								Team
+							<a className="nav-link Gugi js-scroll-trigger " href="#stats">
+								Skills
 							</a>
 						</li>
 						<li className="nav-item">

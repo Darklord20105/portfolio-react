@@ -5,7 +5,8 @@ import Nav from './components/shared/Nav';
 import Showcase from './components/home/showcase';
 import Services from './components/home/services';
 // my portfolio (my work) component
-import Portfolio from './components/Portfolio';
+import Portfolio from './components/work/Portfolio';
+import portfolioLinks from './components/work/portfoliolinks';
 // about components
 import Bio from './components/about/bio';
 import Stats from './components/about/stats';
@@ -17,37 +18,6 @@ import Footer from './components/shared/footer';
 import './App.css';
 
 function App() {
-	const portfolioLinks = [
-		{
-			title: 'Threads',
-			caption: 'Illustration'
-		},
-		{
-			title: 'Explore',
-			caption: 'Graphic Design'
-		},
-		{
-			title: 'Finish',
-			caption: 'Identity'
-		},
-		{
-			title: 'Lines',
-			caption: 'Branding'
-		},
-		{
-			title: 'Southwest',
-			caption: 'Website Design'
-		},
-		{
-			title: 'Window',
-			caption: 'Photography'
-		},
-		{
-			title: 'Pizza',
-			caption: 'I love pizza!'
-		}
-	];
-
 	return (
 		<div className="App">
 			<Nav />
