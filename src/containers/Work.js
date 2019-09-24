@@ -54,30 +54,3 @@ class Work extends Component {
 }
 
 export default Work;
-
-// original html template before adding my styles
-{
-  /* <div className="col-md-4 col-sm-6 portfolio-item" key={id}>
-                  <Link to={"/Work/" + id}>
-                    <div className="portfolio-link" data-toggle="modal">
-                      <div className="portfolio-hover">
-                        <div className="portfolio-hover-content">
-                          <i className="fa fa-plus fa-3x"></i>
-                        </div>
-                      </div>
-                      <img
-                        className="img-fluid"
-                        src={`https://unsplash.it/350/140/?${Math.floor(
-                          Math.random(0, 100) * 100
-                        )}`}
-                        alt="portfolio_img"
-                      />
-                    </div>
-                  </Link>
-                  <div className="portfolio-caption">
-                    <h4>{title}</h4>
-                    <p className="text-muted">{caption}</p>
-                  </div>
-                </div>
-              )) */
-}

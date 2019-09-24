@@ -1,86 +1,114 @@
-import React from "react";
+import React, { Component } from "react";
 
-const Contact = () => {
-  return (
-    <section className="page-section">
-      <div className="container">
-        <div className="row">
-          <div className="col-lg-12 text-center">
-            <h2 className="section-heading text-uppercase Gugi">Contact Us</h2>
-            <h3 className="section-subheading text-muted">
-              Lorem ipsum dolor sit amet consectetur.
-            </h3>
+class Contact extends Component {
+  state = {
+    name: "",
+    email: "",
+    phone: "",
+    message: ""
+  };
+  handleChange = e => {
+    this.setState({
+      [e.target.id]: e.target.value
+    });
+  };
+  handleSubmit = e => {
+    e.preventDefault();
+    console.log(this.state);
+  };
+  render() {
+    return (
+      <section className="page-section">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-12 text-center">
+              <h2 className="section-heading text-uppercase Gugi">
+                Contact Us
+              </h2>
+              <h3 className="section-subheading text-muted">
+                Lorem ipsum dolor sit amet consectetur.
+              </h3>
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-lg-12">
+              <form
+                id="contactForm"
+                onSubmit={this.handleSubmit}
+                name="sentMessage"
+                noValidate="noValidate"
+              >
+                <div className="row">
+                  <div className="col-md-6">
+                    <div className="form-group">
+                      <input
+                        className="form-control"
+                        id="name"
+                        type="text"
+                        placeholder="Your Name *"
+                        required="required"
+                        data-validation-required-message="Please enter your name."
+                        onChange={this.handleChange}
+                      />
+                      <p className="help-block text-danger" />
+                    </div>
+                    <div className="form-group">
+                      <input
+                        className="form-control"
+                        id="email"
+                        type="email"
+                        placeholder="Your Email *"
+                        required="required"
+                        data-validation-required-message="Please enter your email address."
+                        onChange={this.handleChange}
+                      />
+                      <p className="help-block text-danger" />
+                    </div>
+                    <div className="form-group">
+                      <input
+                        className="form-control"
+                        id="phone"
+                        type="tel"
+                        placeholder="Your Phone *"
+                        required="required"
+                        data-validation-required-message="Please enter your phone number."
+                        onChange={this.handleChange}
+                      />
+                      <p className="help-block text-danger" />
+                    </div>
+                  </div>
+                  <div className="col-md-6">
+                    <div className="form-group">
+                      <textarea
+                        className="form-control"
+                        id="message"
+                        placeholder="Your Message *"
+                        required="required"
+                        data-validation-required-message="Please enter a message."
+                        onChange={this.handleChange}
+                      />
+                      <p className="help-block text-danger" />
+                    </div>
+                  </div>
+                  <div className="clearfix" />
+                  <div className="col-lg-12 text-center">
+                    <div id="success" />
+                    <button
+                      id="sendMessageButton"
+                      className="btn btn-primary btn-xl text-uppercase"
+                      type="submit"
+                    >
+                      Send Message
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
           </div>
         </div>
-        <div className="row">
-          <div className="col-lg-12">
-            <form id="contactForm" name="sentMessage" noValidate="noValidate">
-              <div className="row">
-                <div className="col-md-6">
-                  <div className="form-group">
-                    <input
-                      className="form-control"
-                      id="name"
-                      type="text"
-                      placeholder="Your Name *"
-                      required="required"
-                      data-validation-required-message="Please enter your name."
-                    />
-                    <p className="help-block text-danger" />
-                  </div>
-                  <div className="form-group">
-                    <input
-                      className="form-control"
-                      id="email"
-                      type="email"
-                      placeholder="Your Email *"
-                      required="required"
-                      data-validation-required-message="Please enter your email address."
-                    />
-                    <p className="help-block text-danger" />
-                  </div>
-                  <div className="form-group">
-                    <input
-                      className="form-control"
-                      id="phone"
-                      type="tel"
-                      placeholder="Your Phone *"
-                      required="required"
-                      data-validation-required-message="Please enter your phone number."
-                    />
-                    <p className="help-block text-danger" />
-                  </div>
-                </div>
-                <div className="col-md-6">
-                  <div className="form-group">
-                    <textarea
-                      className="form-control"
-                      id="message"
-                      placeholder="Your Message *"
-                      required="required"
-                      data-validation-required-message="Please enter a message."
-                    />
-                    <p className="help-block text-danger" />
-                  </div>
-                </div>
-                <div className="clearfix" />
-                <div className="col-lg-12 text-center">
-                  <div id="success" />
-                  <button
-                    id="sendMessageButton"
-                    className="btn btn-primary btn-xl text-uppercase"
-                    type="submit"
-                  >
-                    Send Message
-                  </button>
-                </div>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-};
+      </section>
+    );
+  }
+}
 
 export default Contact;
