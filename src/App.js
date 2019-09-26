@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 // gneral layout
-import Nav from "./components/shared/Nav";
+import NavigationBar from "./components/shared/Nav";
 // pages
 import Home from "./containers/Home";
 import Work from "./containers/Work";
@@ -17,7 +17,7 @@ function App() {
   return (
     <BrowserRouter>
       <div className="App">
-        <Nav />
+        <NavigationBar />
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/Work" component={Work} />

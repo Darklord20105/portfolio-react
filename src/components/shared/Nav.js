@@ -1,55 +1,46 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./nav.css";
+import { Nav, Navbar, Container, NavItem } from "react-bootstrap";
 
-const Nav = () => {
+const NavigationBar = () => {
   return (
-    // cahnge nav from fixed to stable with the class 'fixed-top'
-    <nav className="navbar navbar-expand-lg " id="mainNav">
-      <div className="container">
-        <a className="navbar-brand js-scroll-trigger " href="#page-top">
-          OH WEB DEV
-        </a>
-        <button
-          className="navbar-toggler navbar-toggler-right"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          Menu_
-          <i className="fa fa-bars" />
-        </button>
-        <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul className="navbar-nav text-uppercase ml-auto">
-            <li className="nav-item">
-              <Link className="nav-link Gugi js-scroll-trigger " to="/">
+    <Navbar collapseOnSelect fluid expand="lg" id="mainNav">
+      <Container>
+        <Navbar.Brand>
+          <Link className="nav-link Gugi" to="/">
+            OH WEB DEV
+          </Link>
+        </Navbar.Brand>
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        <Navbar.Collapse id="responsive-navbar-nav">
+          <Nav pullRight>
+            <NavItem className="nav-item">
+              <Link className="nav-link Gugi" to="/">
                 Home
               </Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link Gugi js-scroll-trigger " to="/Work">
+            </NavItem>
+            <NavItem className="nav-item">
+              <Link className="nav-link Gugi" to="/Work">
                 Work
               </Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link Gugi js-scroll-trigger " to="/About">
+            </NavItem>
+            <NavItem className="nav-item">
+              <Link className="nav-link Gugi" to="/About">
                 About
               </Link>
-            </li>
+            </NavItem>
 
-            <li className="nav-item">
-              <Link className="nav-link Gugi js-scroll-trigger " to="/Contact">
+            <NavItem className="nav-item">
+              <Link className="nav-link Gugi" to="/Contact">
                 Contact
               </Link>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+            </NavItem>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
   );
 };
 
-export default Nav;
+export default NavigationBar;
