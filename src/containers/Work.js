@@ -23,8 +23,8 @@ class Work extends Component {
             {this.state.portfolioLinks.length ? (
               this.state.portfolioLinks.map(({ title, caption, id }, index) => (
                 <Link to={"/Work/" + id}>
-                  <div>
-                    <div className="item" key={id}>
+                  <div key={id}>
+                    <div className="item">
                       <div className="item-image">
                         <img
                           src={`https://unsplash.it/800/600/?${Math.floor(

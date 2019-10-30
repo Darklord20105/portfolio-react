@@ -6,7 +6,7 @@ import NavigationBar from "./components/shared/Nav";
 import Home from "./containers/Home";
 import Work from "./containers/Work";
 import About from "./containers/About";
-import Contact from "./containers/Contact";
+import Contact from "./containers/testcontact";
 import Project from "./components/work/project";
 // footer
 import Footer from "./components/shared/Footer";
