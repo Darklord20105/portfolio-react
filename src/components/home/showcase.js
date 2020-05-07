@@ -6,14 +6,15 @@ const Showcase = () => {
       <div className="container">
         <div className="intro-text">
           <div className="intro-lead-in">Welcome To My Portfolio!</div>
-          <div className="intro-heading text-uppercase">
-            I am Omar , Nice To Meet You
-          </div>
+          <div className="intro-heading text-uppercase">I am Omar</div>
+          <div className="intro-heading text-uppercase"> A Front-end</div>
+          <div className="intro-heading text-uppercase"> web developer</div>
           <a
-            className="btn btn-primary btn-xl text-uppercase js-scroll-trigger"
+            className="btn btn-lg text-white btn-warning text-uppercase"
             href="#services"
+            style={{ backgroundColor: "#fed136" }}
           >
-            Tell Me More
+            Tell Me More &rarr;
           </a>
         </div>
       </div>

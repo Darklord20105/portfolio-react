@@ -1,17 +1,13 @@
 import React from "react";
-import "./stats.css";
+
 const Stats = ({ statsData }) => {
   return (
     <section className="bg-dark page-section" id="stats">
       <div>
         <div className="container">
-          <h2
-            className="text-center text-uppercase section-heading Gugi "
-            style={{ color: "#f4f4f4" }}
-          >
+          <h2 className="text-center text-uppercase section-heading text-white">
             Technical skills
           </h2>
-
           <div className="stats" style={{ paddingTop: 2 + "rem" }}>
             {statsData.map(({ name, progStyle, id }, index) => {
               return (

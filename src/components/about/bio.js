@@ -1,5 +1,5 @@
 import React from 'react';
-import './bio.css';
+import myPhoto from "../../assets/img/about.jpg"
 
 const Bio = () => {
 	return (
@@ -7,18 +7,18 @@ const Bio = () => {
 			<div className="container">
 				<div className="row">
 					<div className="col-lg-12 text-center">
-						<h2 className="section-heading text-uppercase Gugi">About Me</h2>
+						<h2 className="section-heading text-uppercase">About Me</h2>
 						<h3 className="section-subheading  text-muted">let Me tell you a bit about myself</h3>
 					</div>
 				</div>
 
 				<div className="row">
 					<div className="col-lg-6">
-						<img src="./img/about.jpg" className="img-info" alt="" />
+						<img src={myPhoto} className="img-info" alt="personal" />
 					</div>
 					<div className="col-lg-6">
 						<div className="txt-info">
-							<h3 style={{ color: 'inherit', paddingBottom: '1rem' }}>Your Project is in Safe Hands</h3>
+							<h3 class="pt-3" style={{ color: 'inherit' }}>Your Project is in Safe Hands</h3>
 							<p>
 								Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam perferendis blanditiis
 								culpa deserunt officiis voluptas? Velit pariatur voluptatum excepturi reiciendis, quas

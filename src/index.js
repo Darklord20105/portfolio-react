@@ -1,11 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./index.css";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
-//css bootstarp
-import "./assets/css/bootstrap.min.css";
-import "./assets/css/agency.min.css";
+
+import "./assets/styles/css/bootstrap.min.css";
+import "./assets/styles/sass/main.scss";
+import "./assets/icons/font-awesome/css/all.css"
 
 ReactDOM.render(<App />, document.getElementById("root"));
 

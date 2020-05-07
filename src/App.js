@@ -1,23 +1,17 @@
 import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-// gneral layout
-import NavigationBar from "./components/shared/Nav";
-// pages
-import Home from "./containers/Home";
-import Work from "./containers/Work";
-import About from "./containers/About";
-import Contact from "./containers/testcontact";
-import Project from "./components/work/project";
-// footer
-import Footer from "./components/shared/Footer";
-// styling
-import "./App.css";
+
+import Layout from "./components/layout/layout";
+import Home from "./components/pages/Home";
+import Work from "./components/pages/Work";
+import About from "./components/pages/About";
+import Contact from "./components/pages/Contact";
+import Project from "./components/project";
 
 function App() {
   return (
     <BrowserRouter>
-      <div className="App">
-        <NavigationBar />
+      <Layout>
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/Work" component={Work} />
@@ -25,8 +19,7 @@ function App() {
           <Route exact path="/About" component={About} />
           <Route exact path="/Contact" component={Contact} />
         </Switch>
-        <Footer />
-      </div>
+      </Layout>
     </BrowserRouter>
   );
 }

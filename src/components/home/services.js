@@ -6,7 +6,7 @@ const Services = () => {
       <div className="container">
         <div className="row">
           <div className="col-lg-12 text-center">
-            <h2 className="section-heading text-uppercase Gugi">Services</h2>
+            <h2 className="section-heading text-uppercase">Services</h2>
             <h3 className="section-subheading  text-muted">
               creating digital masterpieces and UI/UX layouts using the Latest
               most powerfull techniques for websites, Web apps and mobile
@@ -17,10 +17,10 @@ const Services = () => {
         <div className="row text-center">
           <div className="col-md-4">
             <span className="fa-stack fa-4x">
-              <i className="fa fa-circle fa-stack-2x text-primary" />
+              <i className="fa fa-circle fa-stack-2x primary-color" />
               <i className="fa fa-laptop fa-stack-1x fa-inverse" />
             </span>
-            <h4 className="service-heading">UI/UX Design</h4>
+            <h4 className="py-3 text-dark">UI/UX Design</h4>
             <p className="text-muted">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima
               maxime quam architecto quo inventore harum ex magni, dicta
@@ -30,12 +30,12 @@ const Services = () => {
 
           <div className="col-md-4">
             <span className="fa-stack fa-4x">
-              <i className="fa fa-circle fa-stack-2x text-primary" />
+              <i className="fa fa-circle fa-stack-2x primary-color" />
               <i className="fas fa-file-alt fa-stack-1x fa-inverse" />
 
               <i className="fas fa-file-alt" />
             </span>
-            <h4 className="service-heading">Form Control</h4>
+            <h4 className="py-3 text-dark">Form Control</h4>
             <p className="text-muted">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima
               maxime quam architecto quo inventore harum ex magni, dicta
@@ -45,10 +45,10 @@ const Services = () => {
 
           <div className="col-md-4">
             <span className="fa-stack fa-4x">
-              <i className="fa fa-circle fa-stack-2x text-primary" />
+              <i className="fa fa-circle fa-stack-2x primary-color" />
               <i className="far fa-question-circle fa-stack-1x fa-inverse" />
             </span>
-            <h4 className="service-heading">Interaction</h4>
+            <h4 className="py-3 text-dark">Interaction</h4>
             <p className="text-muted">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima
               maxime quam architecto quo inventore harum ex magni, dicta

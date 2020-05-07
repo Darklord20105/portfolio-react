@@ -1,0 +1,16 @@
+:root {
+  --color-primary: #fed136;
+}
+
+.primary-color {
+  color: var(--color-primary);
+}
+
+html {
+  font-size: 80%;
+}
+@media screen and (max-width: 500px) {
+  html {
+    font-size: 75%;
+  }
+}
