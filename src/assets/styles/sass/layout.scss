@@ -1,0 +1,124 @@
+.page-section {
+  padding-top: 120px;
+  background-color: #10121b;
+}
+.page-section-bottom {
+  padding-bottom: 120px;
+}
+
+@media screen and (max-width: 767px) {
+  .page-section-bottom {
+    padding-bottom: 80px;
+  }
+}
+
+.page-section .section-title {
+  margin-bottom: 6rem;
+  position: relative;
+  z-index: 4;
+}
+
+.page-section h2.section-heading {
+  color: #fff;
+  font-size: 3.2rem;
+  line-height: 3.95rem;
+  margin-top: 0;
+  padding-bottom: 1rem;
+  font-family: Nunito, sans-serif;
+  font-weight: 700;
+}
+
+.page-section h2.section-heading::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: auto;
+  bottom: 0;
+  height: 5px;
+  border-radius: 100px;
+  width: 100px;
+  background: rgba(3, 127, 255, 0.3);
+  z-index: 3;
+}
+
+.page-section h2.section-heading::after {
+  width: 35px;
+  background: var(--color-primary);
+  content: "";
+  position: absolute;
+  left: 0;
+  top: auto;
+  bottom: 0;
+  height: 5px;
+  z-index: 3;
+  border-radius: 100px;
+}
+
+.section-heading-shadow {
+  position: absolute;
+  left: 0;
+  //   top: 100%;
+  font-size: 6rem;
+  line-height: 1;
+  font-weight: 900;
+  color: rgba(25, 29, 43, 0.44);
+  display: inline-block;
+  text-transform: uppercase;
+  z-index: 2;
+  -webkit-transform: translateY(-40%);
+  transform: translateY(-40%);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  white-space: nowrap;
+}
+
+.primary-button {
+  position: relative;
+  padding: 0 30px;
+  background: #037fff;
+  color: #fff;
+  border: 0;
+  display: inline-block;
+  z-index: 1;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  height: 50px;
+  line-height: 50px;
+
+  transition: all 0.4s ease-out;
+
+  &:hover::before {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: auto;
+    bottom: 0;
+    height: 2px;
+    width: 100%;
+    background: #fff;
+    z-index: -1;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+
+    transition: all 0.4s ease-out;
+  }
+}
+
+// .page-section h3.section-subheading {
+//   // padding: 0 5rem;
+//   font-size: 1.2rem;
+//   line-height: 1.4rem;
+//   font-weight: 400;
+//   font-style: italic;
+//   margin-bottom: 4rem;
+//   text-transform: none;
+// }

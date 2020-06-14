@@ -6,7 +6,7 @@
 
 .item {
   position: relative;
-  background: #dbb81d;
+  background: var(--color-primary-light);
   overflow: hidden;
   margin: 1rem;
   box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3);

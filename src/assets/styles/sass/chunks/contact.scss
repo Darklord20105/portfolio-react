@@ -1,4 +1,102 @@
-.user-info {
-  background-image: url("../../../img/map-image.png");
-  background-color: rgba(0, 0, 0, 1);
+.contact-formwrapper {
+  font-family: Nunito, sans-serif;
+  color: #a4acc4;
+  h4 {
+    font-size: 2.4rem;
+    line-height: 3rem;
+    color: #fff;
+  }
+}
+
+.form-field {
+  font-size: 1.71rem;
+  line-height: 2.43rem;
+  margin-top: 30px;
+  position: relative;
+
+  label {
+    position: absolute;
+    left: 15px;
+    top: -13px;
+    background: #10121b;
+    -webkit-transition: all 0.4s ease-out;
+    transition: all 0.4s ease-out;
+    pointer-events: none;
+    padding: 0 10px;
+    font-size: 0.94rem;
+
+    display: inline-block;
+    margin-bottom: 0.5rem;
+  }
+
+  input,
+  textarea,
+  input:focus,
+  textarea:focus {
+    border: 1px solid #2e344e;
+    font-size: 1rem;
+    height: 50px;
+    padding: 0 15px;
+    padding-top: 16px;
+    width: 100%;
+    font-size: 14px;
+    vertical-align: middle;
+
+    background: transparent;
+    border: 1px solid #2e344e;
+    font-family: Nunito, sans-serif;
+    color: #f4f4f4;
+  }
+
+  textarea,
+  textarea:focus {
+    resize: vertical;
+    height: auto;
+  }
+}
+
+/*
+  user-contact_info
+*/
+.user-contact_info {
+  margin-top: -30px;
+
+  .contact-infoblock {
+    margin-top: 30px;
+    background: #191d2b;
+    padding: 30px;
+    display: flex;
+
+    &-icon {
+      display: inline-block;
+      height: 70px;
+      width: 70px;
+      flex: 0 0 70px;
+      max-width: 70px;
+      border: 1px solid #2e344e;
+      text-align: center;
+      line-height: 66px;
+      margin-right: 20px;
+      svg {
+        width: 30px;
+        height: 30px;
+      }
+    }
+
+    &-content {
+      h6 {
+        margin-top: -5px;
+        font-size: 1.4rem;
+        font-weight: 2.1rem;
+        color: #fff;
+        padding-bottom: 5px;
+      }
+      p {
+        font-size: 18px;
+        font-weight: 1.7rem;
+        color: #a4acc4;
+        margin-bottom: 0 !important;
+      }
+    }
+  }
 }

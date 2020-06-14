@@ -14,10 +14,10 @@ function App() {
       <Layout>
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route exact path="/Work" component={Work} />
-          <Route path="/Work/:project_id" component={Project} />
-          <Route exact path="/About" component={About} />
-          <Route exact path="/Contact" component={Contact} />
+          <Route exact path="/work" component={Work} />
+          <Route path="/work/:project_id" component={Project} />
+          <Route exact path="/about" component={About} />
+          <Route exact path="/contact" component={Contact} />
         </Switch>
       </Layout>
     </BrowserRouter>

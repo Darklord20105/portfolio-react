@@ -1,5 +1,6 @@
 @import "base";
 @import "typography";
+@import "layout";
 
 @import "chunks/navbar.scss";
 @import "chunks/footer.scss";
@@ -7,7 +8,10 @@
 @import "chunks/showcase.scss";
 
 @import "chunks/timeline.scss";
-@import "chunks/bio-stats.scss";
+@import "chunks/bio.scss";
+@import "chunks/services.scss";
+@import "chunks/testimonial.scss";
+@import "chunks/stats.scss";
 
 @import "chunks/work.scss";
 

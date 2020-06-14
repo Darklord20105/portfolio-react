@@ -33,14 +33,14 @@ class Work extends Component {
   };
   render() {
     return (
-      <section className="bg-light page-section">
+      <section className="page-section page-section-bottom">
         <div className="container">
           <div className="row">
-            <div className="col-lg-12 text-center">
-              <h2 className="section-heading text-uppercase">Portfolio</h2>
-              <h3 className="section-subheading text-muted">
-                Lorem ipsum dolor sit amet consectetur.
-              </h3>
+            <div className="col-lg-12">
+              <div className="section-title">
+                <h2 className="section-heading text-uppercase">Portfolio</h2>
+                <span className="section-heading-shadow">Portfolio</span>
+              </div>
             </div>
           </div>
           <div className="rowf work-items">

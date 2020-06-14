@@ -1,35 +1,40 @@
 const functions = require("firebase-functions");
+const admin = require("firebase-admin")
 const nodemailer = require("nodemailer");
-const cors = require("cors");
+const cors = require("cors")({ origin: true });
 
-const gmailEmail = functions.config().gmail.email;
-const gmailPassword = functions.config().gmail.password;
+admin.initializeApp()
+
+// const gmailEmail = functions.config().gmail.email;
+// const gmailPassword = functions.config().gmail.password;
 const mailTransport = nodemailer.createTransport({
-  service: "gmail",
-  auth: {
-    user: gmailEmail,
-    pass: gmailPassword
-  }
+    service: "gmail",
+    auth: {
+        // user: gmailEmail,
+        // pass: gmailPassword
+        user: "omarhj1992@gmail.com",
+        pass: "09940568815404279"
+    }
 });
 
 exports.submit = functions.https.onRequest((req, res) => {
-  cors(req, res, () => {
-    if (req.method !== "POST") {
-      return;
-    }
+    cors(req, res, () => {
+        if (req.method !== "POST") {
+            return;
+        }
 
-    const mailOptions = {
-      from: req.body.email,
-      replyTo: req.body.email,
-      to: gmailEmail,
-      subject: `from my website ${req.body.email}`,
-      text: req.body.message,
-      html: `<p>${req.body.message}`
-    };
+        const mailOptions = {
+            from: req.body.email,
+            to: "omarhj1992@gmail.com",
+            subject: `from my website ${req.body.email}`,
+            text: req.body.message,
+            html: `<p>${req.body.message}>/p>`
+        };
 
-    mailTransport.sendMail(mailOptions);
-    res.status(200).end();
-    // or you can pass data to indicate success.
-    // res.status(200).send({isEmailSend: true});
-  });
-});
+        return mailTransport.sendMail(mailOptions).then(() => {
+            console.log('New email sent to:', gmailEmail)
+            res.status(200).send({ isEmailSend: true })
+            return
+        })
+    })
+})

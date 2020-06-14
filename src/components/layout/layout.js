@@ -1,13 +1,21 @@
 import React from "react"
 import NavigationBar from "./Nav"
-import Footer from "./Footer"
 
 const Layout = (props) => {
     return (
         <>
             <NavigationBar />
-            {props.children}
-            <Footer />
+            <main className="main-content">
+                <div className="main-lines">
+                    <span />
+                    <span />
+                    <span />
+                    <span />
+                    <span />
+                    <span />
+                </div>
+                {props.children}
+            </main>
         </>
     )
 }

@@ -1,27 +1,6 @@
-//
-//    Bio Component
-//
-
-#about-a .txt-info {
-  padding: 1rem;
-  margin: 1rem;
-  color: #555;
-  padding: 2rem 0;
-}
-.img-info {
-  width: 100%;
-  padding: 0 0.5rem;
-}
-
-@media only screen and (max-weidth: 768px) {
-  #about-a .img-info {
-    width: 80%;
-  }
-}
-
-//
-// Stats Component
-//
+/*
+  Stats Component
+*/
 #about-b {
   padding: 2rem;
 }
@@ -53,7 +32,7 @@
   text-align: left !important;
 }
 
-h3,
-h4 {
+.stats h3,
+.stats h4 {
   color: #f4f4f4;
 }

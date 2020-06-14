@@ -1,14 +1,26 @@
 import React from "react";
 import Bio from "../about/bio";
-import Stats from "../about/stats";
-import statsData from "../data/statsData";
+import Services from "../about/services"
+import Reviews from "../about/reviews"
 
 const About = () => {
   return (
-    <div>
-      <Bio />
-      <Stats statsData={statsData} />
-    </div>
+    <section className="page-section" id="bio">
+      <div className="container">
+        <div className="row">
+          <div className="col-lg-12">
+            <div className="section-title">
+              <h2 className="section-heading text-uppercase">About Me</h2>
+              <span className="section-heading-shadow">About Me</span>
+            </div>
+          </div>
+        </div>
+        <Bio />
+        <Services />
+        <Reviews />
+      </div>
+    </section>
+
   );
 };
 

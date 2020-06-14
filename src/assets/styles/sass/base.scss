@@ -1,5 +1,7 @@
 :root {
-  --color-primary: #fed136;
+  --color-primary: #037fff;
+  --color-primary-light: #a4acc4;
+  // --color-primary: #fed136;
 }
 
 .primary-color {
@@ -13,4 +15,68 @@ html {
   html {
     font-size: 75%;
   }
+}
+
+body {
+  font-family: Nunito, sans-serif;
+  color: #a4acc4;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 16px;
+  letter-spacing: 1px;
+  line-height: 2rem;
+  font-weight: 400;
+}
+
+// layout based styles
+
+.main-content {
+  margin-left: 0;
+}
+@media screen and (min-width: 600px) {
+  .main-content {
+    margin-left: 260px;
+  }
+}
+
+.MuiDivider-root {
+  background-color: #2e344e !important;
+  margin: 2rem 0 !important;
+}
+
+.main-lines {
+  z-index: -1;
+  left: 260px;
+  width: calc(100% - 260px);
+
+  & span {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    min-height: 100vh;
+    display: inline-block;
+    width: 1px;
+    background: rgba(46, 52, 78, 0.3);
+    // background-color: red;
+    z-index: 0;
+  }
+}
+
+.main-lines span:first-child {
+  left: 15%;
+}
+.main-lines span:nth-child(2) {
+  left: 30%;
+}
+.main-lines span:nth-child(3) {
+  left: 45%;
+}
+.main-lines span:nth-child(4) {
+  left: 60%;
+}
+.main-lines span:nth-child(5) {
+  left: 75%;
+}
+.main-lines span:last-child {
+  left: 90%;
 }
