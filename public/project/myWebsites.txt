@@ -1,0 +1,27 @@
+1- multi purpose Blog webapp React-Express
+https://dry-dawn-36976.herokuapp.com/
+
+2- static blog with gatsby
+https://awesome-wescoff-3560f0.netlify.app/
+
+3- my portfolio
+https://gifted-swartz-d228c9.netlify.app/
+
+4- face detector webapp
+https://smart-brain-det-fac-front-end.herokuapp.com/
+
+5- multi purpose blog webapp
+ Python-django
+https://my-django-blog-01.herokuapp.com/
+
+6- note maker
+https://project-planner-820d6.firebaseapp.com/
+
+7- trillo project
+https://clever-saha-77f2a4.netlify.app/
+
+8- nexter
+https://silly-kepler-1017b4.netlify.app/
+
+9- Natours
+https://epic-hermann-72d198.netlify.app/

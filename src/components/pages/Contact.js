@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import * as Yup from "yup";
 import { Formik, Field, Form, ErrorMessage } from "formik";
 // import axios from "axios";
-import { Axios, db } from '../../firebase/firebaseConfig'
+// import { Axios, db } from '../../firebase/firebaseConfig'
 import PhoneIcon from '@material-ui/icons/Phone';
 import MailOutlineIcon from '@material-ui/icons/MailOutline';
 import LocationOnIcon from '@material-ui/icons/LocationOn';
@@ -34,18 +34,19 @@ class Contact extends Component {
 
   };
   sendEmail = (fields) => {
-    Axios.post('https://us-central1-omarhj-portfolio-cc12d.cloudfunctions.net/submit', fields)
-      .then(res => {
-        db.collection('emails').add({
-          name: fields.name,
-          email: fields.email,
-          message: fields.message,
-          subject: fields.subject
-        })
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
+    // Axios.post('https://us-central1-omarhj-portfolio-cc12d.cloudfunctions.net/submit', fields)
+    //   .then(res => {
+    //     db.collection('emails').add({
+    //       name: fields.name,
+    //       email: fields.email,
+    //       message: fields.message,
+    //       subject: fields.subject
+    //     })
+    //   })
+    //   .catch(function (error) {
+    //     console.log(error);
+    //   });
+    console.log(fields)
 
   }
   render() {
@@ -77,7 +78,7 @@ class Contact extends Component {
                   render={({ errors, status, touched }) => (
                     <Form>
                       <div className="form-field">
-                        <label for="name">Enter Your Name *</label>
+                        <label htmlFor="name">Enter Your Name *</label>
                         <Field
                           className={
                             "form-control" +
@@ -97,7 +98,7 @@ class Contact extends Component {
                         <p className="help-block text-danger" />
                       </div>
                       <div className="form-field">
-                        <label for="email">Enter Your Email *</label>
+                        <label htmlFor="email">Enter Your Email *</label>
                         <Field
                           className={
                             "form-control" +
@@ -119,7 +120,7 @@ class Contact extends Component {
                         <p className="help-block text-danger" />
                       </div>
                       <div className="form-field">
-                        <label for="subject">Enter Your Message Subject Here *</label>
+                        <label htmlFor="subject">Enter Your Message Subject Here *</label>
                         <Field
                           className={
                             "form-control" +
@@ -142,7 +143,7 @@ class Contact extends Component {
                       </div>
 
                       <div className="form-field">
-                        <label for="message">Enter Your Message Here</label>
+                        <label htmlFor="message">Enter Your Message Here</label>
                         <Field
                           component="textarea"
                           rows="8"

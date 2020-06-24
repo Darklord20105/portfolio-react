@@ -58,7 +58,7 @@ const Reviews = () => {
                     >
                         {data.map(e => {
                             return (
-                                <Carousel.Item>
+                                <Carousel.Item key={e.name}>
                                     <ReviewSlide name={e.name} job={e.job} text={e.text} />
                                 </Carousel.Item>
                             )

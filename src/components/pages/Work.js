@@ -1,29 +1,30 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 import portfolioLinks from "../data/portfoliolinks";
 
 const ProjectItem = (data) => {
   return (
-    <Link to={"/Work/" + data.id}>
-      <div key={data.id}>
-        <div className="item">
-          <div className="item-image">
-            <img
-              src={`https://unsplash.it/800/600/?${Math.floor(
-                Math.random(0, 100) * 100
-              )}`}
-              alt="portfolio_img"
-            />
-          </div>
-          <div className="item-text">
-            <div className="item-text-wrap">
-              <p className="item-text-category">{data.title}</p>
-              <h2 className="item-text-title">{data.caption}</h2>
-            </div>
+    <div key={data.id}>
+      <div className="item">
+        <div className="item-image">
+          <img
+            // src={`https://unsplash.it/800/600/?${Math.floor(
+            //   Math.random(0, 100) * 100
+            // )}`}
+            src={`./project/${data.img}.png`}
+            alt="portfolio_img"
+            height="100%"
+          />
+        </div>
+        <div className="item-text">
+          <div className="item-text-wrap">
+            <p className="item-text-category">{data.title}</p>
+            <h2 className="item-text-title">{data.caption}</h2>
+            <a className="btn btn-info item-text-link d-block mt-2 mx-auto w-50" rel="noopener noreferrer" target="_blank" href={data.link}>Visit</a>
+            <a className="btn btn-info item-text-link d-block mt-2 mx-auto w-50" rel="noopener noreferrer" target="_blank" href={data.github}>GitHub</a>
           </div>
         </div>
       </div>
-    </Link>
+    </div>
   )
 }
 
@@ -45,12 +46,15 @@ class Work extends Component {
           </div>
           <div className="rowf work-items">
             {this.state.portfolioLinks.length ? (
-              this.state.portfolioLinks.map(({ title, caption, id }, index) => (
+              this.state.portfolioLinks.map(({ title, caption, id, link, github, img }, index) => (
                 <ProjectItem
+                  key={id}
                   id={id}
                   title={title}
                   caption={caption}
-                // img={img}
+                  link={link}
+                  github={github}
+                  img={img}
                 />
               ))
             ) : (

@@ -36,7 +36,8 @@ const useStyles = makeStyles((theme) => ({
     zIndex: "1000",
     background: "#191d2b",
     color: "#f4f4f4",
-    borderRadius: "0"
+    borderRadius: "0",
+
   },
   // necessary for content to be below app bar
   toolbar: theme.mixins.toolbar,
@@ -83,7 +84,6 @@ const NavigationBar = (props) => {
     setMobileOpen(!mobileOpen);
   };
 
-
   const drawer = (
     <div>
       <div style={mobileOpen ? { display: "block", position: "absolute", left: "210px", top: "10px" } : { display: "none" }}>
@@ -97,7 +97,7 @@ const NavigationBar = (props) => {
       <Divider />
       <List>
         {navbarLinks.map((text, index) => (
-          <li className="navigation-item" style={{ color: "#f4f4f4", textAlign: "center" }}>
+          <li key={text.name} className="navigation-item" style={{ color: "#f4f4f4", textAlign: "center" }}>
             <NavLink
               to={text.link}
               style={{ zIndex: "500", position: "relative" }}
@@ -125,7 +125,7 @@ const NavigationBar = (props) => {
           onClick={handleDrawerToggle}
           className={classes.menuButton}
         >
-          <MenuIcon />
+          <MenuIcon style={{ fill: "#f4f4f4", fontSize: '2.5rem' }} />
         </IconButton>
         {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
         <Hidden smUp implementation="css">

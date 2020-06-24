@@ -16,7 +16,7 @@ const Services = () => {
           <div className="col-md-4">
             <div className="service-card">
               <span className="fa-stack fa-4x">
-                <i class="fas fa-palette primary-color"></i>
+                <i className="fas fa-palette primary-color"></i>
               </span>
               <h5>Web Design</h5>
               <p>
@@ -29,7 +29,7 @@ const Services = () => {
           <div className="col-md-4">
             <div className="service-card">
               <span className="fa-stack fa-4x">
-                <i class="fas fa-code primary-color"></i>
+                <i className="fas fa-code primary-color"></i>
               </span>
               <h5>Web Development</h5>
               <p>
@@ -42,7 +42,7 @@ const Services = () => {
           <div className="col-md-4">
             <div className="service-card">
               <span className="fa-stack fa-4x">
-                <i class="fas fa-mobile-alt primary-color"></i>
+                <i className="fas fa-mobile-alt primary-color"></i>
               </span>
               <h5>Mobile Applications</h5>
               <p>
