@@ -63,7 +63,7 @@ class Contact extends Component {
           </div>
           {/* Form Section */}
           <div className="row">
-            <div className="col-md-6">
+            <div className="col-md-6 col-sm-12">
               <div className="contact-formwrapper">
                 <h4>Get In Touch</h4>
                 <Formik
@@ -176,7 +176,7 @@ class Contact extends Component {
               </div>
             </div>
 
-            <div className="col-md-6">
+            <div className="col-md-6 col-sm-12">
               <div className="user-contact_info">
                 {/* phone info block */}
                 <div className="contact-infoblock">

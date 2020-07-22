@@ -2,16 +2,19 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 
 // side drawer imports
-
+import { makeStyles, useTheme } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
-import Divider from '@material-ui/core/Divider';
-import Drawer from '@material-ui/core/Drawer';
-import Hidden from '@material-ui/core/Hidden';
-import IconButton from '@material-ui/core/IconButton';
-import List from '@material-ui/core/List';
+import {
+  Divider,
+  Drawer,
+  Hidden,
+  IconButton,
+  List,
+  ListItem,
+} from "@material-ui/core"
 import MenuIcon from '@material-ui/icons/Menu';
 import CloseIcon from '@material-ui/icons/Close';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
+
 
 const drawerWidth = 260;
 
@@ -62,7 +65,7 @@ const navbarLinks = [
   },
   {
     name: "My Work",
-    link: "work"
+    link: "/work"
   },
   {
     name: "Contact",
@@ -96,15 +99,22 @@ const NavigationBar = (props) => {
       </div>
       <Divider />
       <List>
-        {navbarLinks.map((text, index) => (
-          <li key={text.name} className="navigation-item" style={{ color: "#f4f4f4", textAlign: "center" }}>
-            <NavLink
-              to={text.link}
-              style={{ zIndex: "500", position: "relative" }}
-              activeClassName="selected"
-            >
-              {text.name}</NavLink>
-          </li>
+        {navbarLinks.map((data, index) => (
+          <ListItem
+            button
+            exact
+            key={`${data.name}_${index}`}
+            style={{ color: "rgba(244,244,244,.8)", textAlign: "center" }}
+            to={data.link}
+            component={NavLink}
+            activeStyle={{
+              background: "#037fff"
+            }}
+          >
+            <div className="navigation-title-wrapper">
+              <span className="navigation-title-text">{data.name}</span>
+            </div>
+          </ListItem>
         ))}
       </List>
       <Divider />
@@ -117,7 +127,7 @@ const NavigationBar = (props) => {
     <div className={classes.root}>
       <CssBaseline />
 
-      <nav className={classes.drawer} aria-label="mailbox folders">
+      <nav className={classes.drawer}>
         <IconButton
           color="inherit"
           aria-label="open drawer"
@@ -163,20 +173,3 @@ const NavigationBar = (props) => {
 };
 
 export default NavigationBar;
-
-// <AppBar position="fixed" className={classes.appBar}>
-//         <Toolbar>
-//           <IconButton
-//             color="inherit"
-//             aria-label="open drawer"
-//             edge="start"
-//             onClick={handleDrawerToggle}
-//             className={classes.menuButton}
-//           >
-//             <MenuIcon />
-//           </IconButton>
-//           <Typography variant="h6" noWrap>
-//             Responsive drawer
-//           </Typography>
-//         </Toolbar>
-//       </AppBar>
